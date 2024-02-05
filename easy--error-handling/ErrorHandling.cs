@@ -2,6 +2,7 @@ using System;
 
 public static class ErrorHandling
 {
+    // https://learn.microsoft.com/en-us/dotnet/standard/exceptions/
     public static void HandleErrorByThrowingException()
     {
         throw new NotImplementedException("You need to implement this function.");
