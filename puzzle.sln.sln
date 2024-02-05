@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseString", "easy--reve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotSimulator", "easy--robot-simulator\RobotSimulator.csproj", "{845C8D20-C705-4DBC-B860-2716A1A15615}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumber", "easy--phone-number\PhoneNumber.csproj", "{8AC8A54E-7B6F-48F3-B2D2-2A9C5E9A408A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{845C8D20-C705-4DBC-B860-2716A1A15615}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{845C8D20-C705-4DBC-B860-2716A1A15615}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{845C8D20-C705-4DBC-B860-2716A1A15615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AC8A54E-7B6F-48F3-B2D2-2A9C5E9A408A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AC8A54E-7B6F-48F3-B2D2-2A9C5E9A408A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AC8A54E-7B6F-48F3-B2D2-2A9C5E9A408A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AC8A54E-7B6F-48F3-B2D2-2A9C5E9A408A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
