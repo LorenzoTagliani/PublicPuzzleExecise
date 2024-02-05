@@ -10,37 +10,97 @@ public enum Direction
 
 public class RobotSimulator
 {
+    public Direction Direction { get; set; }
+    public int X { get; set; }
+    public int Y { get; set; }
+
     public RobotSimulator(Direction direction, int x, int y)
     {
-    }
-
-    public Direction Direction
-    {
-        get
-        {
-            throw new NotImplementedException("You need to implement this function.");
-        }
-    }
-
-    public int X
-    {
-        get
-        {
-            throw new NotImplementedException("You need to implement this function.");
-        }
-    }
-
-    public int Y
-    {
-        get
-        {
-            throw new NotImplementedException("You need to implement this function.");
-        }
+        this.Direction = direction;
+        this.X = x;
+        this.Y = y;
     }
 
     public void Move(string instructions)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        // Splitto la mia stringa in una lista di char
+        var instructionCharArray = instructions.ToCharArray();
+
+        foreach (var c in instructionCharArray)
+        {
+            switch (c)
+            {
+                case 'A':
+                    Advance();
+                    break;
+                case 'R':
+                    RotateRight();
+                    break;
+                case 'L':
+                    RotateLeft();
+                    break;
+            }
+        }
+
+        return;
+    }
+
+    public void Advance()
+    {
+        switch (this.Direction)
+        {
+            case Direction.North:
+                this.Y++;
+                break;
+            case Direction.East:
+                this.X++;
+                break;
+            case Direction.South:
+                this.Y--;
+                break;
+            case Direction.West:
+                this.X--;
+                break;
+        }
+    }
+
+    public void RotateRight()
+    {
+        switch (this.Direction)
+        {
+            case Direction.North:
+            this.Direction = Direction.East;
+                break;
+            case Direction.East:
+            this.Direction = Direction.South;
+                break;
+            case Direction.South:
+            this.Direction = Direction.West;
+                break;
+            case Direction.West:
+            this.Direction = Direction.North;
+                break;
+        }
+    }
+
+    
+    public void RotateLeft()
+    {
+        switch (this.Direction)
+        {
+            case Direction.North:
+            this.Direction = Direction.West;
+                break;
+            case Direction.West:
+            this.Direction = Direction.South;
+                break;
+            case Direction.South:
+            this.Direction = Direction.East;
+                break;
+            case Direction.East:
+            this.Direction = Direction.North;
+                break;
+        }
     }
 }
 
