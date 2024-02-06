@@ -9,6 +9,21 @@ public class PhoneNumber
 
     public static string Clean(string phoneNumber)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        if (phoneNumber.Length >= 10)
+        {
+            throw new ArgumentException();
+        } 
+        else
+        {
+            if (phoneNumber.Length == 11 && phoneNumber[0] != '1')
+            {
+                throw new ArgumentException();
+            }
+            else
+            {
+                return String.Join("", phoneNumber.Split('1', '(', ')', '-', '.', ' '));
+            }
+        }
+        return String.Join("", phoneNumber.Split('(', ')', '-', '.', ' '));
     }
 }
